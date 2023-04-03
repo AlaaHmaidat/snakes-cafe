@@ -7,6 +7,7 @@ menu = {
 
 order = {}
 
+
 def print_menu():
     print("**************************************")
     print("**    Welcome to the Snakes Cafe!   **")
@@ -14,16 +15,17 @@ def print_menu():
     print("**                                  **")
     print("** To quit at any time, type 'quit' **")
     print("**************************************")
-    
+
     for category, items in menu.items():
         print("\n"+category)
         print("------")
         for item in items:
             print(item)
-    
+
     print("\n" + "*" * 35)
     print("** What would you like to order? **")
     print("*" * 35)
+
 
 def take_order():
     while True:
@@ -36,8 +38,10 @@ def take_order():
             order[item] = 1
         else:
             print("Sorry, that item is not on the menu.")
-        print(f"** {order[item]} order(s) of {item} have been added to your meal **")
+        print(
+            f"** {order[item]} order(s) of {item} have been added to your meal **")
         print_order()
+
 
 def print_order():
     if order:
@@ -47,6 +51,7 @@ def print_order():
             print(f"{quantity} order(s) of {item}")
     else:
         print("Your order is empty.")
-        
+
+
 print_menu()
 take_order()
