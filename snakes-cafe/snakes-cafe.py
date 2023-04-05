@@ -9,6 +9,7 @@ order = {}
 
 
 def print_menu():
+    # menu
     print("**************************************")
     print("**    Welcome to the Snakes Cafe!   **")
     print("**    Please see our menu below.    **")
